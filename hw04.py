@@ -1,5 +1,5 @@
 # ------------------------------------------------------
-#        Name: (put your name here)
+#        Name: (Gloria Domefa)
 #       Peers: (add any collaborators)
 #  References: (anything you checked to solve this)
 # ------------------------------------------------------
@@ -9,11 +9,31 @@ secret_word = "food"
 
 # Task 1
 def check_text():
-    """ Add your docstring """
-    pass
+    """ Gets a sentence from the user and gives different output depending on the user's input 
+        If the user uses the secret word it prints You used the secret word!
+        If the user uses the words dog or Dog it prints You used the word "dog"
+        or the word "Dog"! by including backslash in the print statement
+        If it has neither it prints Try again! and reruns the loop """
+   # Get input from user
+    while (True):
+       user_sentence = input("Give me a sentence: ")
+       
+       # Check if key word is used
+       if secret_word in user_sentence:
+           print("You used the secret word!")
+           break
+        
+       # Check if dog or Dog is used
+       elif "dog" in user_sentence or "Dog" in user_sentence:
+           print("You used the word \"dog\" or the word \"Dog\"!")
+           break
 
+       # If neither are true, print try again and rerun the loop
+       else:
+           print("Try again")
 
-
+    
+        
 # Task 2
 def check_greater():
     """ Add your docstring """
