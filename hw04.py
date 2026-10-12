@@ -21,6 +21,7 @@ def check_text():
        # Check if key word is used
        if secret_word in user_sentence:
            print("You used the secret word!")
+           #end loop
            break
         
        # Check if dog or Dog is used
@@ -36,15 +37,39 @@ def check_text():
         
 # Task 2
 def check_greater():
-    """ Add your docstring """
-    pass
+    """ Gets two integer inputs from the user
+        Tells the user which number is greater
+        If they're equal, it prints Try again and reruns the loop"""
+    while (True):
+        num1 = input("Give me a first integer: ")
+        num2 = input("Give me a second integer: ")
+        #First integer greater than second: prints First is Greater
+        if num1 > num2:
+            print("First is Greater")
+            break
+        # Second integer greater than first: prints Second is Greater
+        elif num2 > num1:
+            print("Second is Greater")
+            break
+        # Integers are equal, prints Try again and repeat body of the loop
+        else:
+            print("Try again")
 
 
 
 # Task 3
 def get_special_numbers():
-    """ Add your docstring """
-    pass
+    """ A for loop to examine numbers 1-40 and print based on criteria:
+        must be odd, a multiple of 3, and not a multiple of 5"""
+    for n in range(1,41):
+        # The number is odd
+        if n % 2 == 1:
+            # The number is a multiple of 3
+            if n % 3 == 0:
+                # The number is not a multiple of 5
+              if n % 5 != 0:
+                  print(n)
+
 
 
 # Task 4.a
