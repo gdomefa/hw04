@@ -82,11 +82,25 @@ def my_for_loop():
         If the input is a valid length and a consonant, it prints 'letter <let> is a consonant'
         """
     user_string = input("Give me a string: ")
-    vowel = ["a","e","i","o","u"]
-    con = ["b", "c", "d", "f", "g", "h", "j", "k", "l", "m", "n", "p", "q", "r", "s", "t", "v", "w", "x", "y", "z"]
-    #for x in range(1,6):
-        #if len(user_string) in range(1,6):
-            #print("testing")
+    vowel = "AaEeIiOoUu"
+    
+    if len(user_string) <= 5 and len(user_string) >= 2 and " " not in user_string:
+        # runs for the length of the user's string
+        for x in range(len(user_string)):
+            # each time the loop runs, let is equal to a different letter in the string
+            let = user_string[x]
+            #prints whether each letter is a vowel or a consonant
+            if let in vowel:
+                print(let,"is a vowel")
+            else:
+                print(let, "is a consonant")
+    # print "bad word" and return if string doesnt meet standards   
+    else:
+        print("bad word")
+        return
+        
+            
+
 
 # Task 4.b
 def my_while_loop():
